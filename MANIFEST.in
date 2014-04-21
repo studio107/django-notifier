@@ -1,0 +1,4 @@
+recursive-include mail107 *
+
+exclude *.py[cod]
+exclude __pycache__

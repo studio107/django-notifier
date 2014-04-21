@@ -1,0 +1,7 @@
+*.py[cod]
+build
+dist
+*.egg-info
+.DS_Store
+*.iml
+.idea
