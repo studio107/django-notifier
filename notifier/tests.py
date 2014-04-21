@@ -15,17 +15,17 @@ class NotifierTest(TestCase):
         self.tpl.save()
 
     def test_simple(self):
-        subject, template = self.tpl.render({
+        subject, body = self.tpl.render({
             'world': 'hello',
             'bar': 'foo'
         })
         self.assertEqual('hello hello', subject)
-        self.assertEqual('foo foo', template)
+        self.assertEqual('foo foo', body)
 
     def test_util(self):
-        subject, template = render_db_template('extra', {
+        subject, body = render_db_template('extra', {
             'world': 'hello',
             'bar': 'foo'
         })
         self.assertEqual('hello hello', subject)
-        self.assertEqual('foo foo', template)
+        self.assertEqual('foo foo', body)
